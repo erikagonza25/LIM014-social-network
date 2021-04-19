@@ -18,8 +18,6 @@ Referido a estudiantes como espacios de información y comunicación, las redes 
 
 Construir una Red Social en la que cualquier usuario pueda crear una cuenta de acceso y loguearse con ella; así como crear, editar, borrar y "likear" publicaciones.
 
-[========]
-
 <p align="center"><strong>Wartay</strong></p>
 <p align="center"><a href="logo wartay"><img src="imageReadme/logoWartay.jpeg"></a><br>
 <strong>Logo Red Social Educativa<strong><p>
@@ -72,8 +70,8 @@ Se realizo un test a 5 personas sobre la usabilidad de la red social y su diseñ
 
 ### 6. Prototipo Final:
 
-![Screenshot](./imageReadme/prototipoDesktop.git)
-![Screenshot](./imageReadme/prototipoMobile.git)
+![Alt Text](./imageReadme/prototipoDesktop.git)
+![Alt Text](./imageReadme/prototipoMobile.git)
 
 ### 7. Proyecto Tríos:
 
