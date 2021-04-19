@@ -71,7 +71,7 @@ Se realizo un test a 5 personas sobre la usabilidad de la red social y su diseñ
 ### 6. Prototipo Final:
 
 ![Screenshot](https://media.giphy.com/media/0Vdpt3VJeekr5Wt9Q4/giphy.gif)
-![Screenshot](https://media.giphy.com/media/ufcR8DKJjisX5RirGZ/giphy.gif)
+![Screenshot](https://media.giphy.com/media/k2AK12wbfxYWGE2CJJ/giphy.gif)
 
 ### 7. Proyecto Tríos:
 
