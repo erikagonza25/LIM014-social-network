@@ -21,7 +21,7 @@ Construir una Red Social en la que cualquier usuario pueda crear una cuenta de a
 [========]
 
 <p align="center"><strong>Wartay</strong></p>
-<p align="center"><a href="logo wartay"><img src="readme/logo.png"></a><br>
+<p align="center"><a href="logo wartay"><img src="imageReadme/logoWartay.jpeg"></a><br>
 <strong>Logo Red Social Educativa<strong><p>
 
 ### 3. Resumen del proyecto
