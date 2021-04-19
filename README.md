@@ -18,15 +18,15 @@ Referido a estudiantes como espacios de información y comunicación, las redes 
 
 ### 2. Planteamiento del problema
 
+### 3. Resumen del proyecto
+
 Construir una Red Social en la que cualquier usuario pueda crear una cuenta de acceso y loguearse con ella; así como crear, editar, borrar y "likear" publicaciones.
+
+Wartay (Fusión de Warma =niño y Watay = educar en quechua) es una red social educativa dirigida a padres, profesores y alumnos del nivel primario, en la cual tendrán la opción de compartir y crear información en diversas áreas de estudio para reforzar el aprendizaje de los estudiantes.
 
 <p align="center"><strong>Wartay</strong></p>
 <p align="center"><a href="logo wartay"><img src="imageReadme/logoWartay.jpeg"></a><br>
 <strong>Logo Red Social Educativa<strong><p>
-
-### 3. Resumen del proyecto
-
-Watay (Fusión de Warma =niño y Watay = educar en quechua) es una red social educativa dirigida a padres, profesores y alumnos del nivel primario, en la cual tendrán la opción de compartir y crear información en diversas áreas de estudio para reforzar el aprendizaje de los estudiantes.
 
 ### 4. Investigación del PO (Público Objetivo)
 
