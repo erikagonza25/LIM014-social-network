@@ -71,7 +71,7 @@ Se realizo un test a 5 personas sobre la usabilidad de la red social y su diseñ
 ### 6. Prototipo Final:
 
 <h1 align="center">Prototipo desktop<img src="https://github.com/erikagonza25/LIM014-social-network/blob/dev/imageReadme/prototipoDesktop.gif" width="80" height="80" /></h1>
-![Alt Text](https://giphy.com/gifs/ufcR8DKJjisX5RirGZ/giphy.gif)
+![Alt Text](https://media.giphy.com/media/ufcR8DKJjisX5RirGZ/giphy.gif)
 
 ### 7. Proyecto Tríos:
 
