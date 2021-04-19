@@ -6,7 +6,9 @@
 - [2. Planteamiento del problema](#2-planteamiento-del-problema)
 - [3. Resumen del proyecto](#3-resumen-del-proyecto)
 - [4. Investigación del PO](#4-investigacion-del-po)
-- [5. Integrantes](#5-integrantes)
+- [5. Test de Usabilidad](#5-test-de-usabilidad)
+- [6. Prototipo final](#5-prototipo-final)
+- [7. Integrantes](#5-integrantes)
 
 ### 1. Preámbulo
 
@@ -70,8 +72,11 @@ Se realizo un test a 5 personas sobre la usabilidad de la red social y su diseñ
 
 ### 6. Prototipo Final:
 
-![Screenshot](https://media.giphy.com/media/0Vdpt3VJeekr5Wt9Q4/giphy.gif)
-![Screenshot](https://media.giphy.com/media/k2AK12wbfxYWGE2CJJ/giphy.gif)
+- Mobile
+  ![Screenshot](https://media.giphy.com/media/0Vdpt3VJeekr5Wt9Q4/giphy.gif)
+
+- Desktop
+  ![Screenshot](https://media.giphy.com/media/k2AK12wbfxYWGE2CJJ/giphy.gif)
 
 ### 7. Proyecto Tríos:
 
