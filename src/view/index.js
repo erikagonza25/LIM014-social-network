@@ -1,9 +1,11 @@
 import Home from './home.js';
-import Catalogo from './catalogo.js';
+import Check from './check.js';
+import errorPage from './404.js';
 
 const components = {
   home: Home,
-  catalogo: Catalogo,
+  check: Check,
+  pageError: errorPage,
 };
 
 export { components };

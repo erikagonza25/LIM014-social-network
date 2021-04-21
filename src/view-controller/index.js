@@ -8,11 +8,11 @@ const changeView = (route) => {
       return container.appendChild(components.home());
     }
     case '#/registrate': {
-      return container.appendChild(components.catalogo());
+      return container.appendChild(components.check());
     }
 
     default:
-      return container.appendChild(components.catalogo());
+      return container.appendChild(components.pageError());
   }
 };
 

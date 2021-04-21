@@ -1,11 +1,11 @@
 export default () => {
-  const viewCatalogo = `<section class="logoDestokpTwo">
-  <img src="./imageProject/logoDestok.jpg" alt="logoDestokp" >
+  const viewCheck = `<section class="logoDestokp">
+  <img src="./imageProject/logoDestok.jpg" alt="logoDestok" >
 </section>
 <section id="containTwo">
 <div class="loginContainer">
 <!-- Logo -->   
- <section class="userPass"><img src="./imageProject/logoWartay.png" alt="Logo Wartay" width="150">
+ <section class="userPass" id="logoCheck"><img src="./imageProject/logoWartay.png" alt="Logo Wartay" width="150">
  </section>
  <!-- Texto inicio --> 
  <section class="userPass"><img src="./imageProject/usuario.jpeg" alt="Logo Registro" width="80">
@@ -26,12 +26,13 @@ export default () => {
    <input class="controls" type="password" placeholder="Ingrese su Contraseña" required>
    <label>Confirma tu contraseña:</label>
    <input class="controls" type="password" placeholder="Confirme Contraseña" required>
-    <a class="btnLoginTwo" href="#/">Login</a>
+    <a class="btnLoginTwo" href="#/">Crear cuenta</a>
  </section>
 </div>
 </section>`;
   const divElement = document.createElement('div');
-  divElement.innerHTML = viewCatalogo;
+  divElement.innerHTML = viewCheck;
+  divElement.className = 'checkPage';
 
   return divElement;
 };

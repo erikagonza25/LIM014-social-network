@@ -44,6 +44,7 @@ export default () => {
 </section>`;
   const divElement = document.createElement('div');
   divElement.innerHTML = viewHome;
+  divElement.className = 'homePage';
 
   return divElement;
 };
