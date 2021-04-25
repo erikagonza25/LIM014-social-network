@@ -1,10 +1,12 @@
-import Home from './home.js';
+import Login from './login.js';
 import Check from './check.js';
 import errorPage from './404.js';
+import Home from './home.js';
 
 const components = {
-  home: Home,
+  login: Login,
   check: Check,
+  home: Home,
   pageError: errorPage,
 };
 
