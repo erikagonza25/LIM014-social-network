@@ -47,6 +47,12 @@ body {
   display: flex;
   flex-direction: column;
 }
+#userEmail:focus {
+  border: solid 2px #3b99f7;
+}
+#userPassword:focus {
+  border: solid 2px #3b99f7;
+}
 /* diseño textos login */
 .userPass {
   font-size: 0.8em;
@@ -85,6 +91,9 @@ input {
   background: #e67ea8;
   border-radius: 10px;
 }
+#btnLogin:hover {
+  background-color: #3b99f7;
+}
 /* ubicación y medidas logos facebook, gmail */
 .links {
   display: flex;
@@ -92,9 +101,18 @@ input {
   align-items: center;
   margin-bottom: 15px;
 }
+#btnFacebook:hover {
+  background-color: #3b99f7;
+}
+#btnGmail:hover {
+  background-color: #3b99f7;
+}
 /* color texto de registrate*/
 .checkIn {
   color: #333;
+}
+.checkIn:hover {
+  background-color: #3b99f7;
 }
 .formRegister {
   width: 400px;
@@ -127,17 +145,10 @@ label {
   border: 1px solid rgb(136, 120, 120);
   font-size: 12px;
 }
-
-.formRegister .botons {
-  width: 50%;
-  margin-left: 28%;
-  background: #e67ea8;
-  border: none;
-  border-radius: 10px;
-  padding: 12px;
-  color: white;
-  font-size: 16px;
+.controls:focus {
+  border: solid 2px #3b99f7;
 }
+
 #btnLoginTwo {
   color: #fff;
   padding: 11px 63px;
@@ -146,6 +157,9 @@ label {
   background: #e67ea8;
   border-radius: 10px;
   padding-top: 2%;
+}
+#btnLoginTwo:hover {
+  background-color: #3b99f7;
 }
 header {
   background-color: #3b99f7;
@@ -299,50 +313,7 @@ h4 {
   display: flex;
   justify-content: space-between;
 }
-/* ---- @media queries   ----  */
-@media (min-width: 320px) and (max-width: 768px) {
-  body {
-    max-width: 100%;
-  }
-  .checkPage {
-    display: flex;
-    justify-content: center;
-  }
-  .homePage {
-    display: flex;
-    justify-content: center;
-  }
-  .loginContainer {
-    padding: 0% 0% 0% 0%;
-  }
-  #logoCheck {
-    display: none;
-  }
-  .formRegister {
-    width: 90%;
-  }
-  .btnLoginTwo {
-    padding: 5px 54px;
-    margin-left: 0%;
-    display: flex;
-    justify-content: center;
-  }
-  @media (max-width: 780px) {
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .logoDestokp {
-      display: none;
-    }
-    .logoDestokpTwo img {
-      display: none;
-    }
-  }
-}
-/* ---- vista 404   ----  */
+/* ----- Diseño y medidas Vista 404.js ----- */
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 .body404 {
   height: 100vh;
@@ -413,3 +384,51 @@ h4 {
   background: #69a6ce;
   color: #fff;
 }
+/* ---- @media queries   ----  */
+@media (min-width: 320px) and (max-width: 768px) {
+  body {
+    max-width: 100%;
+  }
+  .loginPage {
+    display: flex;
+  }
+  .checkPage {
+    display: flex;
+    justify-content: center;
+  }
+
+  .homePage {
+    display: flex;
+    justify-content: center;
+  }
+  .loginContainer {
+    padding: 0% 0% 0% 0%;
+  }
+  #logoCheck {
+    display: none;
+  }
+  .formRegister {
+    width: 90%;
+  }
+  #btnLoginTwo {
+    padding: 5px 54px;
+    margin-left: 0%;
+    display: flex;
+    justify-content: center;
+  }
+  @media (max-width: 780px) {
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logoDestokp {
+      display: none;
+    }
+    .logoDestokpTwo img {
+      display: none;
+    }
+  }
+}
+

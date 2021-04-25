@@ -28,10 +28,10 @@ export default () => {
       <!-- Ingreso con Facebook o Gmail -->
       <p class="userPass">o bien ingresa con...</p>
       <section class="links">
-        <a href="#/"id="btnFacebook"
-          ><img src="./imageProject/f.png" alt="Facebook" width="25" />
+        <a id="btnFacebook"
+          ><img src="./imageProject/f.png" alt="Facebook" width="25" id="facebookBtn"/>
         </a>
-        <a href="#/"id="btnGmail"
+        <a id="btnGmail"
           ><img src="./imageProject/g.png" alt="Gmail" width="22" />
         </a>
       </section>

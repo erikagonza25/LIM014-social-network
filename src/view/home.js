@@ -2,7 +2,7 @@ export default () => {
   const viewHome = `<body>
   <header>
   <section class="navigation">
-    <p class="nameUser">Nombre</p>
+    <p id="nameUser"></p>
      <img
           src="./imageProject/bottonBurger.png"
           class="imgBurger"
