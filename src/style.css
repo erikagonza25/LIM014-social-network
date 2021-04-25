@@ -11,8 +11,9 @@ con grid  */
 body {
   min-height: 100vh;
   width: 110%;
+  max-width: 100%;
 }
-.homePage {
+.loginPage {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -41,10 +42,16 @@ body {
   align-items: center;
 }
 /* diseño registro de cuenta */
-.loginForm {
+#loginForm {
   width: 100%;
   display: flex;
   flex-direction: column;
+}
+#userEmail:focus {
+  border: solid 2px #3b99f7;
+}
+#userPassword:focus {
+  border: solid 2px #3b99f7;
 }
 /* diseño textos login */
 .userPass {
@@ -76,13 +83,16 @@ input {
   padding: 14px 64px;
 }
 /* diseño botón login */
-.btnLogin {
+#btnLogin {
   color: #fff;
   padding: 14px 64px;
   margin: 20px auto;
   font-weight: bold;
   background: #e67ea8;
   border-radius: 10px;
+}
+#btnLogin:hover {
+  background-color: #3b99f7;
 }
 /* ubicación y medidas logos facebook, gmail */
 .links {
@@ -91,9 +101,18 @@ input {
   align-items: center;
   margin-bottom: 15px;
 }
+#btnFacebook:hover {
+  background-color: #3b99f7;
+}
+#btnGmail:hover {
+  background-color: #3b99f7;
+}
 /* color texto de registrate*/
 .checkIn {
   color: #333;
+}
+.checkIn:hover {
+  background-color: #3b99f7;
 }
 .formRegister {
   width: 400px;
@@ -126,18 +145,11 @@ label {
   border: 1px solid rgb(136, 120, 120);
   font-size: 12px;
 }
-
-.formRegister .botons {
-  width: 50%;
-  margin-left: 28%;
-  background: #e67ea8;
-  border: none;
-  border-radius: 10px;
-  padding: 12px;
-  color: white;
-  font-size: 16px;
+.controls:focus {
+  border: solid 2px #3b99f7;
 }
-.btnLoginTwo {
+
+#btnLoginTwo {
   color: #fff;
   padding: 11px 63px;
   margin-left: 13%;
@@ -146,15 +158,245 @@ label {
   border-radius: 10px;
   padding-top: 2%;
 }
+#btnLoginTwo:hover {
+  background-color: #3b99f7;
+}
+header {
+  background-color: #3b99f7;
+}
+.navigation {
+  display: flex;
+  justify-content: space-around;
+}
+.navigation ul {
+  display: flex;
+  margin-top: 19px;
+  margin-bottom: 19px;
+}
+.navigation ul a {
+  text-decoration: none;
+  margin-top: 10px;
+  color: white;
+  margin-left: 10px;
+}
+.nameUser {
+  display: flex;
+  align-items: center;
+  margin-left: 4%;
+  color: white;
+  font-size: larger;
+}
+.logoDestok {
+  display: flex;
+  margin-left: 39%;
+  margin-right: 24%;
+}
+.logoDestok p {
+  margin-top: 16%;
+  margin-left: 10%;
+  font-size: xx-large;
+  color: white;
+}
+.imgBurger {
+  display: none;
+}
+.imgClose {
+  width: 17%;
+}
+.profile {
+  width: 400px;
+  height: 330px;
+  background: #fff;
+  margin-top: 5%;
+  margin-left: 10%;
+  box-shadow: 0px 1px 10px 1px #000;
+  overflow: hidden;
+}
+.container {
+  height: 200px;
+  background: #3b99f7;
+}
+
+.camara {
+  height: 50px;
+  width: 50px;
+  margin-top: 43%;
+  margin-left: 85%;
+}
+
+.image-container img {
+  margin-top: -5%;
+  margin-left: 5%;
+  width: 120px;
+  height: 120px;
+}
+
+.lower-container {
+  height: 280px;
+  background: #fff;
+  padding: 20px;
+  padding-top: 38px;
+  padding-left: 180px;
+  text-align: center;
+}
+.lower-container h3,
+h4 {
+  font-weight: bold;
+  color: #4e4187;
+}
+.username {
+  grid-column-start: 2;
+  padding: 18px 56px 35px 41px;
+  border-style: groove;
+  margin-top: 2%;
+  margin-bottom: 14%;
+  margin-right: 2%;
+  border-radius: 20px;
+}
+#mypara {
+  width: 627px;
+  height: 79px;
+  border-radius: 20px;
+}
+.post {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3%;
+}
+.imgbttn {
+  margin-right: 84%;
+  width: 6%;
+}
+#postmypost {
+  color: #fff;
+  padding: 9px 5px;
+  font-weight: bold;
+  background: #e67ea8;
+  border-radius: 10px;
+}
+.mainpost {
+  background-color: #ffffff;
+  border: 1px solid #b7b7b7;
+  border-radius: 4px;
+  padding: 0;
+  box-shadow: 4px 1.5px 5px #999999;
+  margin-bottom: 0;
+}
+.mainpost .publish {
+  padding-left: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #3b99f7;
+}
+.mainpost .time {
+  padding-left: 8px;
+  font-size: 12px;
+  color: white;
+}
+.mainpost .quotes {
+  margin: 12px 4px 8px 4px;
+  font-size: 14px;
+  font-family: sans-serif;
+  text-align: justify;
+  padding: 5px;
+  border-bottom: 2px solid #000000;
+}
+.likedislike .like {
+  font-size: 11px;
+  font-family: Verdana;
+  color: #999;
+}
+#user {
+  color: white;
+}
+.main {
+  display: flex;
+  justify-content: space-between;
+}
+/* ----- Diseño y medidas Vista 404.js ----- */
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+.body404 {
+  height: 100vh;
+  background: -webkit-repeating-linear-gradient(
+    -45deg,
+    #71b7e6,
+    #69a6ce,
+    #b98acc,
+    #ee8176,
+    #b98acc,
+    #69a6ce,
+    #9b59b6
+  );
+  background-size: 400%;
+}
+#error-page {
+  position: absolute;
+  top: 10%;
+  left: 15%;
+  right: 15%;
+  bottom: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+#error-page .content {
+  max-width: 600px;
+  text-align: center;
+}
+.content h2.header {
+  font-size: 18vw;
+  line-height: 1em;
+  position: relative;
+  color: #9b59b6;
+}
+.content h4 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+  font-size: 2em;
+  max-width: 600px;
+  position: relative;
+}
+.content p {
+  font-size: 1.2em;
+  color: #0d0d0d;
+}
+.content .btns {
+  margin: 25px 0;
+  display: inline-flex;
+}
+.content .btns a {
+  display: inline-block;
+  margin: 0 10px;
+  text-decoration: none;
+  border: 2px solid #69a6ce;
+  color: #ee8176;
+  font-weight: bold;
+  padding: 10px 25px;
+  border-radius: 25px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+.content .btns a:hover {
+  background: #69a6ce;
+  color: #fff;
+}
 /* ---- @media queries   ----  */
 @media (min-width: 320px) and (max-width: 768px) {
   body {
     max-width: 100%;
   }
+  .loginPage {
+    display: flex;
+  }
   .checkPage {
     display: flex;
     justify-content: center;
   }
+
   .homePage {
     display: flex;
     justify-content: center;
@@ -168,7 +410,7 @@ label {
   .formRegister {
     width: 90%;
   }
-  .btnLoginTwo {
+  #btnLoginTwo {
     padding: 5px 54px;
     margin-left: 0%;
     display: flex;
