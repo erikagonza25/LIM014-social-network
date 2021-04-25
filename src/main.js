@@ -1,4 +1,5 @@
 import { changeView } from './view-controller/index.js';
+import configurationKeys from './lib/configurationKeys.js';
 
 const init = () => {
   changeView(window.location.hash);
@@ -6,3 +7,7 @@ const init = () => {
 };
 
 window.addEventListener('load', init);
+
+window.onload = () => {
+  configurationKeys();
+};
