@@ -15,13 +15,13 @@ export default () => {
  <section class="formRegister">
    <h4>Registro de cuenta</h4><hr class="linea">
    <label>Nombre:</label>
-   <input class="controls" type="text" placeholder="Ingresa tu nombre" required>
+   <input id="name" class="controls" type="text" placeholder="Ingresa tu nombre" required>
    <label>Apellido:</label>
-   <input class="controls" type="text" placeholder="Ingrese su Apellido" required>
+   <input id="surname" class="controls" type="text" placeholder="Ingrese su Apellido" required>
    <label>Email:</label>
    <input class="controls" id="email" type="email" placeholder="Ingrese su Correo" required>
    <label>Eres un profesor, estudiante ó padre de familia:</label>
-   <select class="controls" name="Orden" >
+   <select class="controls" name="profession" >
   <option value="" disabled selected>Ejem.Prof, estudiante, padre</option>
   <option value="az">Profesor</option>
   <option value="za">Profesora</option>
@@ -32,7 +32,7 @@ export default () => {
    <label>Crea tu contraseña:</label>
    <input class="controls" id="password" type="password" placeholder="Ingrese su Contraseña" required>
    <label>Confirma tu contraseña:</label>
-   <input class="controls" type="password" placeholder="Confirme Contraseña" required>
+   <input class="controls" id="passwordConfirm" type="password" placeholder="Confirme Contraseña" required>
     <a id="btnLoginTwo" >Crear cuenta</a>
  </section>
 </div>

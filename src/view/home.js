@@ -52,7 +52,7 @@ export default () => {
                 <img class="imgbttn" src="./imageProject/subirImagen.png" alt="subir" width="20">
                 <button type="button" id="postmypost" class="postmypost" onclick="mypost();">Compartir</button>
               </section>
-  </section>
+  
   </section>
   <section class="mainpost">
     <section class="publish"> <p id="user"> Publicado por Miss Maria</p>
@@ -64,7 +64,8 @@ export default () => {
               <section class="likedislike">
                 <p class="like">
                   <span id="like">5 </span> likes &nbsp <span id="dislike">0 </span> dislikes
-                </p>         
+                </p>  
+                </section>       
   </section>
   </main>
     </body> `;

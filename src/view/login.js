@@ -18,10 +18,10 @@ export default () => {
     <!-- Inputs de ingreso -->
     <form id="loginForm">
       <label class="form-input">
-        <input id="userEmail" type="text" placeholder="Email" />
+        <input id="userEmail" type="text" placeholder="Email" required/>
       </label>
       <label class="form-input">
-        <input id="userPassword" type="password" placeholder="Contraseña" />
+        <input id="userPassword" type="password" placeholder="Contraseña" required />
       </label>
       <!-- Botón Login -->
       <a id="btnLogin">Login</a>
