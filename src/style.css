@@ -53,6 +53,12 @@ body {
 #userPassword:focus {
   border: solid 2px #3b99f7;
 }
+#userEmail:hover {
+  border: solid 2px #3b99f7;
+}
+#userPassword:hover {
+  border: solid 2px #3b99f7;
+}
 /* diseño textos login */
 .userPass {
   font-size: 0.8em;
@@ -121,7 +127,10 @@ input {
   padding: 30px;
   margin-top: 10px;
 }
-
+.col-12error{
+  color: red;
+  margin-bottom: 2%;
+}
 h4 {
   color: #4e4187;
   text-align: center;
@@ -146,6 +155,9 @@ label {
   font-size: 12px;
 }
 .controls:focus {
+  border: solid 2px #3b99f7;
+}
+.controls:hover {
   border: solid 2px #3b99f7;
 }
 
@@ -404,17 +416,20 @@ h4 {
 /* ---- @media queries   ----  */
 @media (min-width: 320px) and (max-width: 768px) {
   body {
+    display: flex;
+    justify-content: center;
     max-width: 100%;
+  }
+  .logoDestokp {
+    display: none;
+  }
+  .logoDestokpTwo img {
+    display: none;
   }
   .loginPage {
     display: flex;
   }
   .checkPage {
-    display: flex;
-    justify-content: center;
-  }
-
-  .homePage {
     display: flex;
     justify-content: center;
   }
@@ -432,19 +447,5 @@ h4 {
     margin-left: 0%;
     display: flex;
     justify-content: center;
-  }
-  @media (max-width: 780px) {
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .logoDestokp {
-      display: none;
-    }
-    .logoDestokpTwo img {
-      display: none;
-    }
   }
 }
