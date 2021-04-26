@@ -1,4 +1,20 @@
-function singUp(email, password) {
+// Función que salva datos del usuario
+const saveUsers = (/* name, email, uid */) => {
+  const db = firebase.firestore();
+  db.collection('users').add({
+    name: 'name',
+    email: 'email',
+    uid: 'uid',
+  })
+    .then((docRef) => {
+      console.log('Document written with ID: ', docRef.id);
+    })
+    .catch((error) => {
+      console.error('Error adding document: ', error);
+    });
+};
+// Función para registrarse
+function singUp(email, password, nick) {
   return new Promise((resolve, reject) => {
     firebase
       .auth()
@@ -9,9 +25,10 @@ function singUp(email, password) {
       .catch((error) => {
         reject(error.message);
       });
+    saveUsers(email, password, nick);
   });
 }
-
+// Función para iniciar sesion
 function singIn(email, password) {
   return new Promise((resolve, reject) => {
     firebase
@@ -68,4 +85,5 @@ export default {
   singIn,
   loginGoogle,
   loginFacebook,
+  saveUsers,
 };
