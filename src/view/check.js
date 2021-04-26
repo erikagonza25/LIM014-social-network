@@ -15,13 +15,17 @@ export default () => {
  <section class="formRegister">
    <h4>Registro de cuenta</h4><hr class="linea">
    <label>Nombre:</label>
-   <input id="name" class="controls" type="text" placeholder="Ingresa tu nombre" required>
+   <input  id="user-name" class="controls" type="text" placeholder="Ingresa tu nombre" required>
+   <p class="col-12error" id="name-error"></p>
    <label>Apellido:</label>
-   <input id="surname" class="controls" type="text" placeholder="Ingrese su Apellido" required>
+   <input id="user-lastname" class="controls" type="text" placeholder="Ingrese su Apellido" required>
+   <p class="col-12error" id="lastname-error"></p>
    <label>Email:</label>
    <input class="controls" id="email" type="email" placeholder="Ingrese su Correo" required>
+   <p class="col-12error" id="email-error">
+   </p>
    <label>Eres un profesor, estudiante ó padre de familia:</label>
-   <select class="controls" name="profession" >
+   <select class="controls" name="Orden" >
   <option value="" disabled selected>Ejem.Prof, estudiante, padre</option>
   <option value="az">Profesor</option>
   <option value="za">Profesora</option>
@@ -32,7 +36,8 @@ export default () => {
    <label>Crea tu contraseña:</label>
    <input class="controls" id="password" type="password" placeholder="Ingrese su Contraseña" required>
    <label>Confirma tu contraseña:</label>
-   <input class="controls" id="passwordConfirm" type="password" placeholder="Confirme Contraseña" required>
+   <input class="controls"  id= "password-confirm" type="password" placeholder="Confirme Contraseña" required>
+   <p class="col-12error" id="pass-error">
     <a id="btnLoginTwo" >Crear cuenta</a>
  </section>
 </div>

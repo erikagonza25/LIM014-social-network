@@ -20,18 +20,20 @@ export default () => {
       <label class="form-input">
         <input id="userEmail" type="text" placeholder="Email" required/>
       </label>
+      <p class="col-12error" id="emailerror"></p>
       <label class="form-input">
-        <input id="userPassword" type="password" placeholder="Contraseña" required />
+        <input id="userPassword" type="password" placeholder="Contraseña" required/>
       </label>
+      <p class="col-12error" id="passerror"></p>
       <!-- Botón Login -->
       <a id="btnLogin">Login</a>
       <!-- Ingreso con Facebook o Gmail -->
       <p class="userPass">o bien ingresa con...</p>
       <section class="links">
-        <a id="btnFacebook"
-          ><img src="./imageProject/f.png" alt="Facebook" width="25" id="facebookBtn"/>
+        <a href="#/"id="btnFacebook"
+          ><img src="./imageProject/f.png" alt="Facebook" width="25" />
         </a>
-        <a id="btnGmail"
+        <a href="#/"id="btnGmail"
           ><img src="./imageProject/g.png" alt="Gmail" width="22" />
         </a>
       </section>
