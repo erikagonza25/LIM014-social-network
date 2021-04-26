@@ -1,5 +1,6 @@
-import auth from '../js/authFirebase.js';
 import { components } from '../view/index.js';
+import auth from '../js/authFirebase.js';
+import validation from '../js/validation.js';
 
 const changeView = (route) => {
   const container = document.getElementById('container');
@@ -15,24 +16,33 @@ const changeView = (route) => {
         event.preventDefault();
         const email = document.getElementById('userEmail').value;
         const password = document.getElementById('userPassword').value;
-        auth
-          .singIn(email, password)
-          .then((user) => {
-            console.log('User: ', user);
-            if (user.email === email) {
-              window.location.hash = '#/home';
-            } else {
-              console.log('usuario o contraseña incorrectos');
-            }
-          })
-          .catch((error) => {
-            console.log('Error:', error);
-          });
+        if (email === '' || password === '') {
+          alert('Campos vacios');
+        } else if (validation.validateUser(email)) {
+          if (validation.validatePassword(password)) {
+            auth
+              .singIn(email, password)
+              .then((user) => {
+                // console.log('User: ', user);
+                if (user.email === email) {
+                  window.location.hash = '#/home';
+                } else {
+                  alert('usuario o contraseña incorrectos');
+                }
+              })
+              .catch((error) => {
+                alert(error);
+              });
+          } else {
+            alert('Password no valido');
+          }
+        } else {
+          alert('Correo no valido');
+        }
       });
       document
         .getElementById('btnFacebook')
         .addEventListener('click', () => auth.loginFacebook());
-
       return document
         .getElementById('btnGmail')
         .addEventListener('click', () => auth.loginGoogle());
@@ -44,27 +54,29 @@ const changeView = (route) => {
         .addEventListener('click', () => {
           const email = document.getElementById('email');
           const password = document.getElementById('password');
-          console.log('User: ', email.value, ' - ', password.value);
+          // const passwordConfirm = document.getElementById('passwordConfirm');
+          // const name = document.getElementById('name');
+          // const surname = document.getElementById('surname');
+          // const profession = document.getElementById('profession');
+          // console.log('User: ', email.value, ' - ', password.value);
           auth
             .singUp(email.value, password.value)
             .then((user) => {
-              console.log(user);
+              // console.log(user);
               if (user.email === email.value) {
-                console.log('EXITOSO');
+                window.location.hash = '#/';
+                alert('EXITOSO');
               } else {
-                console.log('No se registro');
+                alert('No se registro');
               }
             })
-            .catch((error) => {
-              console.log('Error: ', error);
+            .catch(() => {
+              alert('Debe llenar todo el formulario');
             });
         });
     }
     case '#/home': {
       container.appendChild(components.home());
-      // document.getElementById('btnLogin').addEventListener('click', (event) => {
-      //   console.log(event);
-      // });
 
       break;
     }
