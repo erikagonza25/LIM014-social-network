@@ -37,7 +37,7 @@ export default () => {
    <input class="controls" id="password" type="password" placeholder="Ingrese su Contraseña" required>
    <label>Confirma tu contraseña:</label>
    <input class="controls"  id= "password-confirm" type="password" placeholder="Confirme Contraseña" required>
-   <p class="col-12error" id="pass-error">
+   <p class="col-12error" id="pass-error"></p>
     <a id="btnLoginTwo" >Crear cuenta</a>
  </section>
 </div>
