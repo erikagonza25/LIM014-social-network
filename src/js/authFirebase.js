@@ -1,20 +1,5 @@
-// Función que salva datos del usuario
-const saveUsers = (/* name, email, uid */) => {
-  const db = firebase.firestore();
-  db.collection('users').add({
-    name: 'name',
-    email: 'email',
-    uid: 'uid',
-  })
-    .then((docRef) => {
-      console.log('Document written with ID: ', docRef.id);
-    })
-    .catch((error) => {
-      console.error('Error adding document: ', error);
-    });
-};
 // Función para registrarse
-function singUp(email, password, nick) {
+function signUp(email, password) {
   return new Promise((resolve, reject) => {
     firebase
       .auth()
@@ -25,11 +10,19 @@ function singUp(email, password, nick) {
       .catch((error) => {
         reject(error.message);
       });
-    saveUsers(email, password, nick);
   });
 }
-// Función para iniciar sesion
-function singIn(email, password) {
+// verificacion de correo
+function emailVerification() {
+  const user = firebase.auth().currentUser;
+  user.sendEmailVerification().then(() => {
+    console.log('enviamos correo');
+  }).catch((error) => {
+    console.log(error);
+  });
+}
+// Función para loguearse
+function signIn(email, password) {
   return new Promise((resolve, reject) => {
     firebase
       .auth()
@@ -38,12 +31,11 @@ function singIn(email, password) {
         resolve(result.user);
       })
       .catch((error) => {
-        reject(error.message);
+        reject(error);
       });
   });
 }
 // Función para entrar por gmail
-
 function loginGoogle() {
   if (!firebase.auth().currentUser) {
     const provider = new firebase.auth.GoogleAuthProvider();
@@ -57,9 +49,9 @@ function loginGoogle() {
       .catch((error) => {
         console.error(error);
       });
-  } else {
+  } /* else {
     firebase.auth().singOut();
-  }
+  } */
 }
 // Función para entrar por facebook
 function loginFacebook() {
@@ -79,11 +71,22 @@ function loginFacebook() {
     firebase.auth().singOut();
   }
 }
+// funcion para cerrar sesion
+/*
+function signOut() {
+  if (confirm('¿Realmente deseas cerrar sesión?')) {
+    firebase.auth().signOut()
+      .then(() => {
+        window.location.hash = '';
+      }).catch((error) => {
+      });
+  }
+} */
 
 export default {
-  singUp,
-  singIn,
+  signUp,
+  signIn,
   loginGoogle,
   loginFacebook,
-  saveUsers,
+  emailVerification,
 };
