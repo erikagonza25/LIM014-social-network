@@ -144,7 +144,7 @@ const changeView = (route) => {
               }
             })
               .catch(() => {
-                alert('Esa cuenta ya existe');
+                alert('La dirección de correo electrónico ya está siendo utilizada por otra cuenta');
               });
           }
         });
