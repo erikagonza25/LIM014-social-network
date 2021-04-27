@@ -1,9 +1,10 @@
-import { components } from '../view/index.js';
 import auth from '../js/authFirebase.js';
+import users from '../js/users.js';
+
+import { components } from '../view/index.js';
 import {
   validateEmail,
 } from '../js/validation.js';
-// import validation from '../js/validation.js';
 
 const changeView = (route) => {
   const container = document.getElementById('container');
@@ -34,7 +35,23 @@ const changeView = (route) => {
           } else {
             passerror.style.display = 'none';
             passerror.innerHTML = '';
-            auth.signIn(email, password);
+            auth.signIn(email, password).then(() => {
+              window.location.hash = '#/home';
+            }).catch((error) => {
+              switch (error.code) {
+                case 'auth/wrong-password':
+                  passerror.innerHTML = 'Usuario o contraseña incorrectos';
+                  break;
+                case 'auth/user-not-found':
+                  passerror.innerHTML = 'Usuario no registrado';
+                  break;
+                default:
+                  console.log(error);
+                  passerror.innerHTML = 'Problemas con nuestros servicios, vuelva a intentar';
+                  break;
+              }
+              passerror.style.display = 'block';
+            });
           }
         }
       });
@@ -63,7 +80,7 @@ const changeView = (route) => {
             document.getElementById('pass-error').innerHTML = 'Contraseñas no coinciden';
             document.getElementById('password').value = '';
             document.getElementById('password-confirm').value = '';
-
+            document.getElementById('password').focus();
             validationOk = false;
           } else {
             document.getElementById('pass-error').style.display = 'none';
@@ -72,7 +89,7 @@ const changeView = (route) => {
           if (newUserPass === '' || newUserPass.length < 6) {
             document.getElementById('pass-error').style.display = 'block';
             document.getElementById('pass-error').innerHTML = 'Debes ingresar una contraseña con minimo 6 caracteres.';
-
+            document.getElementById('password').focus();
             validationOk = false;
           } else {
             document.getElementById('pass-error').style.display = 'none';
@@ -82,7 +99,7 @@ const changeView = (route) => {
             document.getElementById('email-error').style.display = 'block';
             document.getElementById('email-error').innerHTML = 'Debes ingresar un correo válido.';
             document.getElementById('email').value = '';
-
+            document.getElementById('email').focus();
             validationOk = false;
           } else {
             document.getElementById('email-error').style.display = 'none';
@@ -105,32 +122,38 @@ const changeView = (route) => {
           }
           if (validationOk) {
             // proceso de registro
-            auth
-              .singUp(newUserEmail, newUserPass)
-              .then((user) => {
-                console.log(user);
-                const uid = user.uid;
-                if (user.email === newUserEmail) {
-                  console.log('EXITOSO');
-                  user
-                    .add(uid, newUserEmail, newUserPass)
-                    .then((result) => {
-                      console.log(result);
-                    }).catch((error) => {
-                      console.log('Error: ', error);
-                    });
-                } else {
-                  console.log('No se registro');
-                }
-              })
-              .catch((error) => {
-                console.log('Error: ', error);
+            auth.signUp(newUserEmail, newUserPass).then((user) => {
+              console.log(user);
+              const uid = user.uid;
+              if (user.email === newUserEmail) {
+                const userData = {
+                  email: newUserEmail,
+                  firstnames: newUserName,
+                  lastnames: newUserLastName,
+                };
+                users
+                  .add(uid, userData)
+                  .then(() => {
+                    alert('Se registro exitosamente');
+                    window.location.hash = '#/';
+                  }).catch((error) => {
+                    console.log(error);
+                  });
+              } else {
+                alert('No se registro');
+              }
+            })
+              .catch(() => {
+                alert('Esa cuenta ya existe');
               });
           }
         });
     }
     case '#/home': {
       container.appendChild(components.home());
+      // document.getElementById('btnLogin').addEventListener('click', (event) => {
+      //   console.log(event);
+      // });
 
       break;
     }
