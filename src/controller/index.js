@@ -144,7 +144,8 @@ const changeView = (route) => {
               };
               users
                 .add(uid, userData)
-                .then(() => {
+                .then((result) => {
+                  auth.emailVerification(result);
                   alert('Se registro exitosamente');
                   window.location.hash = '#/';
                 }).catch((error) => {
