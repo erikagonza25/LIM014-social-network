@@ -57,11 +57,23 @@ const changeView = (route) => {
       });
       document
         .getElementById('btnFacebook')
-        .addEventListener('click', () => auth.loginFacebook());
+        .addEventListener('click', () => auth.loginFacebook().then((result) => {
+          console.log(result.user.displayName);
+          window.location.hash = '#/home';
+        })
+          .catch((error) => {
+            alert(error);
+          }));
 
       return document
         .getElementById('btnGmail')
-        .addEventListener('click', () => auth.loginGoogle());
+        .addEventListener('click', () => auth.loginGoogle().then((result) => {
+          console.log(result.user.displayName);
+          window.location.hash = '#/home';
+        })
+          .catch((error) => {
+            alert(error);
+          }));
     }
     case '#/registrate': {
       container.appendChild(components.check());
@@ -125,23 +137,19 @@ const changeView = (route) => {
             auth.signUp(newUserEmail, newUserPass).then((user) => {
               console.log(user);
               const uid = user.uid;
-              if (user.email === newUserEmail) {
-                const userData = {
-                  email: newUserEmail,
-                  firstnames: newUserName,
-                  lastnames: newUserLastName,
-                };
-                users
-                  .add(uid, userData)
-                  .then(() => {
-                    alert('Se registro exitosamente');
-                    window.location.hash = '#/';
-                  }).catch((error) => {
-                    console.log(error);
-                  });
-              } else {
-                alert('No se registro');
-              }
+              const userData = {
+                email: newUserEmail,
+                firstnames: newUserName,
+                lastnames: newUserLastName,
+              };
+              users
+                .add(uid, userData)
+                .then(() => {
+                  alert('Se registro exitosamente');
+                  window.location.hash = '#/';
+                }).catch((error) => {
+                  console.log(error);
+                });
             })
               .catch(() => {
                 alert('La dirección de correo electrónico ya está siendo utilizada por otra cuenta');
