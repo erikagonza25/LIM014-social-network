@@ -53,7 +53,7 @@ describe('Debería poder iniciar sesion con cuenta de google', () => {
       expect(user.isAnonymous).toBe(false);
     }));
 });
-/* describe('Debería enviar un correo de validación', () => {
+describe('Debería enviar un correo de validación', () => {
   it('Debería ser una funcion', () => {
     expect(typeof auth.emailVerification).toBe('function');
   });
@@ -61,4 +61,4 @@ describe('Debería poder iniciar sesion con cuenta de google', () => {
     .then((user) => {
       expect(user).toBe('Hola');
     }));
-}); */
+});
