@@ -4,11 +4,7 @@ const signUp = (email, password) => firebase.auth().createUserWithEmailAndPasswo
 const signIn = (email, password) => firebase.auth().signInWithEmailAndPassword(email, password);
 // verificacion de correo
 function emailVerification(email) {
-  firebase.auth().currentUser.sendEmailVerification(email).then(() => {
-    console.log('enviamos correo');
-  }).catch((error) => {
-    console.log(error);
-  });
+  firebase.auth().currentUser.sendEmailVerification(email);
 }
 // Función para entrar por gmail
 function loginGoogle() {
