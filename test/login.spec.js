@@ -30,10 +30,15 @@ describe('función signUp', () => {
   it('Deberia ser una función', () => {
     expect(typeof auth.signUp).toBe('function');
   });
+
   it('Debería poder registrarse', () => auth.signUp('front@end.la', '123456')
     .then((user) => {
       expect(user.email).toBe('front@end.la');
     }));
+  it('Debería ser una funcion', () => {
+    expect(typeof auth.emailVerification).toBe('function');
+  });
+  // eslint-disable-next-line jest/no-focused-tests
 });
 describe('Debería poder iniciar sesion con cuenta de facebook', () => {
   it('Debería ser una funcion', () => {
@@ -54,11 +59,29 @@ describe('Debería poder iniciar sesion con cuenta de google', () => {
     }));
 });
 describe('Debería enviar un correo de validación', () => {
-  it('Debería ser una funcion', () => {
-    expect(typeof auth.emailVerification).toBe('function');
+  /* it('Deberia enviar el correo', () => auth.emailVerification()
+    .then((user) => {
+      expect(user).toBe('Hola');
+    }));
+  it('Deberia ser llamado', () => {
+    const drink = jest.fn();
+    auth.emailVerification();
+    expect(drink).toHaveBeenCalled();
+  });
+   it('a', () => {
+    const drink = jest.fn();
+    auth.emailVerification(drink, 'lemon');
+    expect(drink).toHaveBeenCalled();
   });
   it('Deberia enviar el correo', () => auth.emailVerification()
     .then((user) => {
       expect(user).toBe('Hola');
     }));
+  it('b', () => {
+    const prueba = jest.fn(() => true);
+
+    auth.emailVerification();
+
+    expect(prueba).toHaveReturned();
+  }); */
 });
