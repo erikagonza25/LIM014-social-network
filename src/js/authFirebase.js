@@ -3,9 +3,7 @@ const signUp = (email, password) => firebase.auth().createUserWithEmailAndPasswo
 // Función para loguearse
 const signIn = (email, password) => firebase.auth().signInWithEmailAndPassword(email, password);
 // verificacion de correo
-function emailVerification(email) {
-  firebase.auth().currentUser.sendEmailVerification(email);
-}
+const emailVerification = (email) => firebase.auth().currentUser.sendEmailVerification(email);
 // Función para entrar por gmail
 function loginGoogle() {
   const provider = new firebase.auth.GoogleAuthProvider();
