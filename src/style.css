@@ -14,181 +14,9 @@ body {
   max-width: 100%;
 }
 
-/************LOGIN***************/
-.container-logIn{
-  position: absolute;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-evenly;
-  width: 100%;
-  height: 100%;
-}
 
-/* BANNER DESTOKP */
-.logoDestokp {
-  display: flex;
-}
 
-/*CONTENEDOR DEL LOGIN*/
-.loginContainer {
-  max-width: 450px;
-  padding: 14% 14% 30% 5%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
-/*CONTENEDOR DEL FORMULARIO DE LOGIN*/
-#containFirst {
-  display: flex;
-  justify-content: center;
-}
-
-/* FORMULARIO INGRESO CORREO - PASSWORD*/
-#loginForm {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-#userEmail:focus {
-  border: solid 2px #3b99f7;
-}
-#userPassword:focus {
-  border: solid 2px #3b99f7;
-}
-#userEmail:hover {
-  border: solid 2px #3b99f7;
-}
-#userPassword:hover {
-  border: solid 2px #3b99f7;
-}
-
-/*TEXTOS DE LOGIN*/
-.userPass {
-  font-size: 0.8em;
-  font-weight: bold;
-  text-align: center;
-  color: #4e4187;
-  margin-bottom: 3%;
-}
-
-/*DISEÑO INPUTS Y BOTON*/
-input,
-button {
-  border: none;
-  outline: none;
-  border-radius: 30px;
-  font-size: 1.1em;
-  margin-bottom: 2%;
-}
-
-input {
-  width: 100%;
-  background: #e6e6e6;
-  color: #333;
-  padding: 14px 64px;
-}
-
-.btn-logIn {
-  color: #fff;
-  padding: 14px 64px;
-  margin: 10px auto;
-  font-weight: bold;
-  background: #e67ea8;
-  border-radius: 10px;
-  
-}
-.btn-logIn:hover {
-  background-color: #3b99f7;
-}
-
-/*MEDIDAS LOGOS LINK FACE-GMAIL*/
-.links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 15px;
-}
-#btnFacebook:hover {
-  background-color: #3b99f7;
-}
-#btnGmail:hover {
-  background-color: #3b99f7;
-}
-
-/*************CHECK****************/
-/*CONTENEDOR GENERAL*/
-.container-check {
-  display: flex;
-  justify-content: space-around;
-}
-
-/*CONTENEDOR FORMULARIO*/
-#containTwo {
-  display: flex;
-  justify-content: center;
-}
-
-/*INPUTS*/
-.formRegister {
-  width: 400px;
-  border-style: solid;
-  border-radius: 30px;
-  border-color: rgb(136, 120, 120);
-  padding: 30px;
-  margin-top: 10px;
-}
-
-.controls {
-  width: 100%;
-  background: #e6e6e6;
-  padding: 10px;
-  border-radius: 10px;
-  margin-bottom: 6px;
-  border: 1px solid rgb(136, 120, 120);
-  font-size: 12px;
-}
-.controls:focus {
-  border: solid 2px #3b99f7;
-}
-.controls:hover {
-  border: solid 2px #3b99f7;
-}
-
-.col-12{
-  color: red;
-  margin-bottom: 5%;
-  font-size: 0.8em;
-}
-
-h4 {
-  color: #4e4187;
-  text-align: center;
-  font-size: 1.5em;
-  margin-bottom: 10px;
-}
-
-.linea {
-  margin-bottom: 10px;
-}
-
-label {
-  color: #4e4187;
-}
-
-/*BOTON PARA ENVIAR REGISTRO*/
-#btnLoginTwo {
-  color: #fff;
-  padding: 11px 63px;
-  margin-left: 13%;
-  font-weight: bold;
-  background: #e67ea8;
-  border-radius: 10px;
-  padding-top: 2%;
-}
-#btnLoginTwo:hover {
-  background-color: #3b99f7;
-}
 
 /************HEADER HOME******************/
 .main-header {
@@ -265,71 +93,6 @@ label {
   cursor: pointer; 
 }
 
-/**************404****************/
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-.body404 {
-  height: 100vh;
-  background: -webkit-repeating-linear-gradient(
-    -45deg,
-    #71b7e6,
-    #69a6ce,
-    #b98acc,
-    #ee8176,
-    #b98acc,
-    #69a6ce,
-    #9b59b6
-  );
-  background-size: 400%;
-}
-
-#error-page {
-  position: absolute;
-  top: 10%;
-  left: 15%;
-  right: 15%;
-  bottom: 10%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #fff;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
-}
-
-#error-page .content {
-  max-width: 600px;
-  text-align: center;
-}
-
-.content h2.header {
-  font-size: 18vw;
-  line-height: 1em;
-  position: relative;
-  color: #9b59b6;
-}
-
-.content h4 {
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  color: rgb(0, 0, 0);
-  font-size: 2em;
-  max-width: 600px;
-  position: relative;
-}
-
-.content p {
-  font-size: 1.2em;
-  color: #0d0d0d;
-}
-
-.content .bottons {
-  margin: 25px 0;
-  display: inline-flex;
-}
-
-.content .bottons a:hover {
-  background: #69a6ce;
-  color: #fff;
-}
 
 
 /***************@MEDIA QUERIES*******************/
@@ -1001,6 +764,11 @@ select{
   position: absolute;
   right: 0;
 }
+
+.btn-menu-comment{
+  margin-left: 95%;
+}
+
 .btn-menu-post,
 .btn-menu-comment {
   color: #3b99f7;
