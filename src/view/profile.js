@@ -1,11 +1,11 @@
 import {
+  currentUser,
+} from '../js/auth.js';
+import {
   updateCurrentUser, profilePhoto, coveragePhoto, getPost,
 
 } from '../js/firestore.js';
 
-import {
-  currentUser,
-} from '../js/auth.js';
 import { imgStorage } from '../js/storage.js';
 import { itemPost } from './post.js';
 
@@ -33,6 +33,7 @@ export default (dataCurrentUser) => {
       <div class="user-information">
       <span class = "edit-info" id="btn-editProfile"><i class="fas fa-edit"><span class="tooltiptext">Edit information</span></i></span>
         <h2 class="user-name">${dataCurrentUser.username}</p>
+        <h2 class="user-name">${dataCurrentUser.profesión}</p>
         <h3>About me</h3>
       </div>
     </div>
@@ -50,8 +51,10 @@ export default (dataCurrentUser) => {
     </header>
     <form class="editProfile">
       <div class="grupo">
-        <label  for="usernameEdit">User name : </label>
-        <input type="text" id="usernameEdit" value="${dataCurrentUser.username}">
+      <label  for="usernameEdit">User name : </label>
+      <input type="text" id="usernameEdit" value="${dataCurrentUser.username}">
+      <label  for="userProfesión">User Profetion : </label>
+      <input type="text" id="userProfesión" value="${dataCurrentUser.profesión}">
       </div>
       <button type="submit" class="btn-update">UPDATE</a></button>
     </form>
@@ -141,7 +144,8 @@ export default (dataCurrentUser) => {
     const userId = currentUser().uid;
     e.preventDefault();
     const usernameEdit = viewProfile.querySelector('#usernameEdit').value;
-    updateCurrentUser(userId, usernameEdit)
+    const userProfetion = viewProfile.querySelector('#userProfesión').value;
+    updateCurrentUser(userId, usernameEdit, userProfetion)
       .then(() => {
         window.location.reload();
       });
