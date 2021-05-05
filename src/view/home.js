@@ -10,48 +10,44 @@ export default (dataCurrentUser) => {
   const userId = firebase.auth().currentUser.uid;
   viewHome.classList.add('container-home');
   viewHome.innerHTML = `
-  <section class="main-header">
-<nav>
-<ul class="menu-header">
-  <div id="left-menu-header" class= "box">
-    <li class="home-header"><a href="#/home"><i class="fas fa-home"></i>Home</a></li>
-    <li class="profile-header"><a href="#/profile"><i class="fas fa-user-circle"></i>Profile</a></li>
-  </div>
-    <li class="title-header box"><a href="#/home"><img class="logowar" src="./imageProject/logow.png" width="50px">Wartay</a></li>
-    <li id="log-out-header" class="box"><span id ="btn-singOut"><i class="fas fa-sign-out-alt"></i>Cerrar Sesión</span></li>
-</ul>
-</nav>
-<i id="hamburger-menu" class="fas fa-bars hide"></i>
-</section>
-<section id="prueba">
-  <!-- columna -->
-  <aside class="profile-section">
+    <section class="main-header">
+      <nav>
+      <ul class="menu-header">
+      <form id="left-menu-header" class= "box">
+      <li class="home-header"><a href="#/home"><i class="fas fa-home"></i>Home</a></li>
+      <li class="profile-header"><a href="#/profile"><i class="fas fa-user-circle"></i>Profile</a></li>
+      </form>
+      <li class="title-header box"><a href="#/home"><img class="logowar" src="./imageProject/logow.png" width="50px">Wartay</a></li>
+      <li id="log-out-header" class="box"><span id ="btn-singOut"><i class="fas fa-sign-out-alt"></i>Cerrar Sesión</span></li>
+      </ul>
+      </nav>
+      <i id="hamburger-menu" class="fas fa-bars hide"></i>
+    </section>
+    <section id="prueba">
+    <aside class="profile-section">
     <div class="profile">
       <img class="avatar" src="${dataCurrentUser.photo}"/>
       <h2 id="name"> ${dataCurrentUser.username}</h2>
       <h2 id="name">${dataCurrentUser.profesión}</p> 
     </div>
-  </aside>
-
-  <!-- media columna -->
-  <main class="home-section">
-    <!-- Post -->
+    </aside>
+    <main class="home-section">
     <div class="create-post">
       <div class="user">
         <img class="avatar-post" src="${dataCurrentUser.photo}"/>
         <p class="name">${dataCurrentUser.username}</p>
       </div>
-      <div class="content-newpost">
-        <form id = "form-post">
-          <textarea class="text-newpost" placeholder="Share something" spellcheck="false" required></textarea>
-          <i id = "remove-img" style="display: none" class="fas fa-times-circle"></i>
-          <img id="post-img" class="post-img" src=""/>
-          <div class="buttons-bar">
-            <label for="upload-img">
-              <input type="file" accept="image/jpeg, image/png, image/gif" id="upload-img" class="upload-img">
-              <i class="far fa-file-image"><span class="tooltiptext">Upload an image</span></i>
-            </label>
-              <option class="fa" value="public" title = "Public">&#xf57d; </option>
+    <div class="content-newpost">
+      <form id = "form-post">
+        <textarea class="text-newpost" placeholder="¿Que quieres compartir?" spellcheck="false" required></textarea>
+        <i id = "remove-img" style="display: none" class="fas fa-times-circle"></i>
+        <img id="post-img" class="post-img" src=""/>
+        <div class="buttons-bar">
+          <label for="upload-img">
+            <input type="file" accept="image/jpeg, image/png, image/gif" id="upload-img" class="upload-img">
+            <i class="far fa-file-image"><span class="tooltiptext">Upload an image</span></i>
+          </label>
+            <option class="fa" value="public" title = "Public">&#xf57d; </option>
             <button type="submit" id="btn-post" class="btn-post" ><i class="fas fa-paper-plane"></i> Share</button>
           </div>
         </form>
@@ -59,8 +55,8 @@ export default (dataCurrentUser) => {
     </div>
     <section id="container-post"></section>
     </section>
-  </main>
-  <section class="modal-progress">
+    </main>
+    <section class="modal-progress">
     <div class="progress">
       <progress value="0" max="100" id="uploader">0%</progress>
       <p id="messageProgress">0%</p>
