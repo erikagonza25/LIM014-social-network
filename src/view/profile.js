@@ -54,7 +54,7 @@ export default (dataCurrentUser) => {
       <label  for="usernameEdit">User name : </label>
       <input type="text" id="usernameEdit" value="${dataCurrentUser.username}">
       <label  for="userProfesión">User Profetion : </label>
-      select id="userProfesión" class="controls" name="Orden" >
+      <select id="userProfesión" class="controls" name="Orden" >
   <option value="" disabled selected>Ejem.Prof, estudiante, padre</option>
   <option value="${dataCurrentUser.profesión}">Profesor</option>
   <option value="${dataCurrentUser.profesión}">Profesora</option>
