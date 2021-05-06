@@ -64,7 +64,7 @@ export const commentAdd = (UserId, idPost, Comment) => {
 // Función para solicitar los datos para el comentarios agregados a la coleccion
 export const getComment = (idPost, callback) => {
   const db = firebase.firestore();
-  db.collection(`wartaywartay/${idPost}/SN_Comment`).orderBy('date', 'desc')
+  db.collection(`wartay/${idPost}/SN_Comment`).orderBy('date', 'desc')
     .onSnapshot((querySnapshot) => {
       const comment = [];
       querySnapshot.forEach((doc) => {
