@@ -97,8 +97,10 @@ export const itemPost = (objPost) => {
       // const btnCancelEdit = postElement.querySelector('.btn-cancel-edit');
       // editar post
       editPost.addEventListener('click', () => {
-        postElement.querySelector('.edit-text-post').style.display = 'block';
-        postElement.querySelector('.text-post').classList.add('hide');
+        if (userId === objPost.userId) {
+          postElement.querySelector('.edit-text-post').style.display = 'block';
+          postElement.querySelector('.text-post').classList.add('hide');
+        }
       });
       // cancelar la edición de post
       /* btnCancelEdit.addEventListener('click', () => {
@@ -114,7 +116,9 @@ export const itemPost = (objPost) => {
       // borrar post
       postElement.querySelector(`#delete-post-${objPost.id}`)
         .addEventListener('click', () => {
-          removePost(objPost.id);
+          if (userId === objPost.userId) {
+            removePost(objPost.id);
+          }
         });
       // actualizarlikes
       const likes = postElement.querySelector('#btn-like');

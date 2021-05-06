@@ -1382,3 +1382,7 @@ display: none;
 .fa-sign-out-alt:before,.fa-user-circle:before,.fa-home:before,.fa-file-image:before{
   color:#e67ea8;
 }
+
+.hide {
+  display: none
+}
