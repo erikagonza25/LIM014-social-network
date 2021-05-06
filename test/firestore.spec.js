@@ -44,6 +44,7 @@ global.firebase = new MockFirebase(fixtureData, { isNaiveSnapshotListenerEnabled
 describe('función userData', () => {
   it('Deberia ser una función', () => {
     expect(typeof userData).toBe('function');
+    expect(typeof getUserData).toBe('function');
   });
   it('Deberia crear un nuevo usuario', () => {
     const currentUser = {
@@ -96,6 +97,7 @@ describe('función updateCurrentUser', () => {
 describe('Función postAdd', () => {
   it('Deberia ser una función', () => {
     expect(typeof postAdd).toBe('function');
+    expect(typeof getPost).toBe('function');
   });
   it('Deberia crear un post', (done) => postAdd('uid_001', 'Kelly', '', '', '')
     .then(() => getPost(
@@ -110,6 +112,7 @@ describe('Función postAdd', () => {
 describe('Función commentAdd', () => {
   it('Deberia ser una función', () => {
     expect(typeof commentAdd).toBe('function');
+    expect(typeof getComment).toBe('function');
   });
   it('Deberia agregar una nuevo comentario', (done) => commentAdd('uid_001', 'id_001', 'Hola')
     .then(() => getComment('id_001',
