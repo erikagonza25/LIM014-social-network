@@ -22,40 +22,22 @@ const fixtureData = {
     SN_Users: {
       __doc__: {
         uid_002: {
-          username: 'Kelly',
           email: 'kelmita22@gmail.com',
           photo: '',
           photoCover: '',
-          phone: '',
-          birthday: 'yyyy-MM-dd',
-          country: '',
-          description: '',
+          profesión: 'Profesión',
+          username: 'Kelly Marquez',
         },
       },
     },
     wartay: {
       __doc__: {
         id_001: {
-          userId: '001',
           date: '',
-          privacy: 'Public',
+          likes: '',
           publication: 'Primera publicación',
           urlimg: '',
-          likes: '',
-          planes: '',
-
-          __collection__: {
-            SN_Comment: {
-              __doc__: {
-                cid_001: {
-                  userId: '001',
-                  pid: 'id_001',
-                  date: '',
-                  comment: 'new on Travelin',
-                },
-              },
-            },
-          },
+          userId: '001',
 
         },
       },
