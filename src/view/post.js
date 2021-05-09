@@ -143,7 +143,7 @@ export const itemPost = (objPost) => {
       formComment.addEventListener('submit', (e) => {
         const comment = postElement.querySelector('.comment').value;
         e.preventDefault();
-        commentAdd(currentUser().uid, objPost.id, comment)
+        commentAdd(user.uid, objPost.id, comment)
           .then(() => {
             formComment.reset();
           });
