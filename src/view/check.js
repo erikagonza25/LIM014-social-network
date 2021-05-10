@@ -4,50 +4,69 @@ import { validateEmail } from '../js/validation.js';
 
 export default () => {
   const viewCheck = document.createElement('section');
-  viewCheck.classList.add('container-check');
+  viewCheck.classList.add('container');
   viewCheck.innerHTML = `
-    <section class="logoDestokp">
-      <img src="./imageProject/logoDestok.jpg" alt="logoDestok">
+  <section class="forms-container">
+    <section class="signin-signup">
+      <form action="#" class="sign-in-form">
+        <img src="imageProject/iconWartay.png" id="logoR" class="logo" alt="" />
+        <section class="cuadro">
+        <section class="input-field">
+          <i></i>
+          <input id="user-name" type="text" placeholder="Ingresa tu nombre" required />
+          <p class="col-12 error" id="name-error"></p>
+        </section>
+        <section class="input-field">
+          <i></i>
+          <input id="user-lastname" type="text" placeholder="Ingresa tu apellido" required />
+          <p class="col-12 error" id="lastname-error"></p>
+        </section>
+        <section class="input-field">
+          <i></i>
+          <input id="email" type="email" placeholder="Ingresa tu correo" required />
+          <p class="col-12 error" id="email-error"></p>
+        </section>
+          <select id="select" class="input-field" name="Orden">
+            <option value="" disabled selected>Ejem.Prof, estudiante, padre</option>
+            <option value="za">Profesora</option>
+            <option value="za">Padre</option>
+            <option value="za">Madre</option>
+            <option value="za">Estudiante</option>
+        </select>
+        <section class="input-field">
+          <i></i>
+          <input id="password" type="password" placeholder="Ingrese su contraseña" />
+        </section>
+        <section class="input-field">
+          <i></i>
+          <input id= "password-confirm" type="password" placeholder="Confirme su contraseña" />
+          <p class="col-12 error" id="pass-error"></p>
+        </section>
+        <input type="submit" id="btnLoginTwo" class="btn btnR" value="Crear cuenta" />
+            </section>
+        </form>
+      </section>
     </section>
-    <section id="containTwo">
-    <section class="loginContainer">  
-    <section class="userPass" ><img id="imagLogo" src="./imageProject/iconWartay.png" alt="Logo Wartay" width="320">
     </section>
-    <section class="formRegister">
-    <section>
-      <input  id="user-name" class="controls" type="text" placeholder="Ingresa tu nombre" required />
-      <p class="col-12 error" id="name-error"></p>
-    </section>
-    <section>
-      <input  id="user-lastname" class="controls" type="text" placeholder="Ingrese su Apellido" required />
-      <p class="col-12 error" id="lastname-error"></p>
-    </section>
-    <section>
-      <input class="controls" id="email" type="email" placeholder="Ingrese su Correo" required />
-      <p class="col-12 error" id="email-error"></p>
-    </section>
-    <section>
-      <label>Eres un profesor, estudiante ó padre de familia:</label>
-    <select class="controls" name="Orden" >
-      <option value="" disabled selected>Ejem.Prof, estudiante, padre</option>
-      <option value="az">Profesor</option>
-      <option value="za">Profesora</option>
-      <option value="za">Padre</option>
-      <option value="za">Madre</option>
-      <option value="za">Estudiante</option>
-    </select>
-    </section>
-    <section>
-      <label class="tooltiptext">Debes ingresar una contraseña con minimo 6 caracteres</label>
-      <input class="controls" id="password" type="password" placeholder="Ingrese su Contraseña" required />   </div>
-    <section>
-      <input class="controls"  id= "password-confirm" type="password" placeholder="Confirme Contraseña" required>
-      <p class="col-12 error" id="pass-error"></p>
-      <button type="submit" id="btnLoginTwo">Crear cuenta</button>
-      <p class="col-12 error"></p>
-    </section>
-    </section>
-  </section>`;
+
+  <section class="panels-container">
+  <section class="panel left-panel">
+  <section class="content">
+    <h3 class="h3">Si ya estas registrado</h3>
+    <p class="pa">
+      Da click en nuestro botón de login para que ingreses con tu cuenta
+    </p>
+    <button class="btn transparent" id="signInBtn">
+    Login
+    </button>
+  </section>
+  <img src="imageProject/logoD.png" class="image" alt="" />
+</section>
+</section>
+</section>`;
+  // Evento para regresar a Login
+  const signInBtn = viewCheck.querySelector('#signInBtn');
+  signInBtn.addEventListener('click', () => { window.location.hash = ''; });
   // Función de Inicio de sesión
   const checkBotton = viewCheck.querySelector('#btnLoginTwo');
   checkBotton.addEventListener('click', (e) => {
