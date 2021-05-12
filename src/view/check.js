@@ -152,13 +152,8 @@ export default () => {
               textModal.textContent = 'Se registro exitosamente, se envio un correo para la verificación';
               const closeModal = viewCheck.querySelector('#closeModal');
               closeModal.addEventListener('click', () => {
-                document.getElementById('user-name').value = '';
-                document.getElementById('user-lastname').value = '';
-                document.getElementById('email').value = '';
-                document.getElementById('password').value = '';
-                document.getElementById('password-confirm').value = '';
                 enterModal.classList.remove('showModal');
-                // window.location.hash = '#/';
+                window.location.hash = '#/';
               });
             }).catch((error) => {
               console.log(error);
