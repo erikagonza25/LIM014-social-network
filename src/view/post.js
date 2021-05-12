@@ -87,12 +87,12 @@ export const itemPost = (objPost) => {
       /* ---------------- Menu despegable --------------------------*/
       const btnMenu = postElement.querySelector('.btn-menu-post');
       btnMenu.addEventListener('click', () => {
-        postElement.querySelector('#menu-post-content').classList.toggle('show');
+        postElement.querySelector('#menu-post-content').style.display = 'block';
       });
       // cerrar con click por fuera
       window.addEventListener('click', (e) => {
         if (e.target !== btnMenu) {
-          postElement.querySelector('#menu-post-content').classList.remove('show');
+          postElement.querySelector('#menu-post-content').style.display = 'none';
         }
       });
       /* -------------- editar el menu -------------------*/
@@ -103,16 +103,15 @@ export const itemPost = (objPost) => {
       // editar post
       editPost.addEventListener('click', () => {
         if (userId === objPost.userId) {
-          postElement.querySelector('.edit-text-post').classList.remove('hide');
-          postElement.querySelector('.text-post').classList.add('hide');
+          postElement.querySelector('.edit-text-post').style.display = 'block';
         } else {
           const enterModal = postElement.querySelector('.modal-progress');
           const textModal = postElement.querySelector('#messageAlert');
-          enterModal.classList.classList.add('hide');
+          enterModal.classList.add('showModal');
           textModal.textContent = 'No puedes editar un post de otro usuario';
           const closeModal = postElement.querySelector('#closeModal');
           closeModal.addEventListener('click', () => {
-            enterModal.classList.classList.remove('hide');
+            enterModal.classList.remove('showModal');
           });
         }
       });
