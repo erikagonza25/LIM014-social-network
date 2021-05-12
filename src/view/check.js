@@ -26,7 +26,7 @@ export default () => {
    </div>
    <div>
    <label>Eres un profesor, estudiante ó padre de familia:</label>
-   <select class="controls" name="Orden" >
+   <select id="disable" class="controls" name="Orden" >
   <option value="" disabled selected>Ejem.Prof, estudiante, padre</option>
   <option value="az">Profesor</option>
   <option value="za">Profesora</option>
@@ -42,7 +42,7 @@ export default () => {
    <input class="controls"  id= "password-confirm" type="password" placeholder="Confirme Contraseña" required>
    <p class="col-12 error" id="pass-error"></p></div>
    <div id="btnTwo">
-   <input type="submit" id="btnLoginTwo" value="Check" class="btn solid" /></div>
+   <input type="submit" id="btnLoginTwo" value="Check in" class="btn solid" /></div>
  </section>
         </form>
       </section>
@@ -166,6 +166,12 @@ export default () => {
           textModal.textContent = 'La dirección de correo electrónico ya está siendo utilizada por otra cuenta';
           const closeModal = viewCheck.querySelector('#closeModal');
           closeModal.addEventListener('click', () => {
+            document.getElementById('user-name').value = '';
+            document.getElementById('user-lastname').value = '';
+            document.getElementById('disable').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('password').value = '';
+            document.getElementById('password-confirm').value = '';
             enterModal.classList.remove('showModal');
           });
         });
