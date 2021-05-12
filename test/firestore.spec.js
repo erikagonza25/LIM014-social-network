@@ -13,6 +13,8 @@ import {
   removeComment,
   profilePhoto,
   coveragePhoto,
+  upgradeLike,
+  upgradeComment,
 } from '../src/js/firestore';
 // Collection Firebase mock
 const fixtureData = {
@@ -32,23 +34,21 @@ const fixtureData = {
       __doc__: {
         id_001: {
           date: '',
-          likes: '',
+          likes: [],
           publication: 'Publicaciones',
           urlimg: '',
-          userId: '001',
-
+          userId: 'uid_002',
           __collection__: {
             SN_Comment: {
               _doc_: {
-                id_001: {
-                  comment: 'Hola chicos',
-                  date: '',
-                  userId: '001',
+                comment_001: {
+                  comment: '1',
+                  userId: 'uid_002',
+                  date: '10/5/2021 21:27:28',
                 },
               },
             },
           },
-
         },
       },
     },
@@ -191,4 +191,27 @@ describe('Función coveragePhoto', () => {
     .then((user) => {
       expect(user).toBe(undefined);
     }));
+});
+// Función upgradeLike
+describe('Función upgradeLike', () => {
+  it('Deberia ser una función', () => {
+    expect(typeof upgradeLike).toBe('function');
+  });
+  it('Debería poder actualizar los likes del post', () => upgradeLike('id_001', [])
+    .then((user) => {
+      expect(user).toBe(undefined);
+    }));
+});
+// Función upgradeComment
+describe('Función upgradeComment', () => {
+  it('Deberia ser una función', () => {
+    expect(typeof upgradeComment).toBe('function');
+  });
+
+  it('Deberia actualizar información del comentario', (done) => upgradeComment('post_001', 'comment_001', 'Hola chicos')
+    .then(() => getComment('post_001', (data) => {
+      const result = data.find((post) => post.comment === 'Hola chicos');
+      expect(result.comment).toBe('Hola chicos');
+      done();
+    })));
 });
