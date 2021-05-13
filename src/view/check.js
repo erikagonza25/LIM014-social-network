@@ -26,7 +26,7 @@ export default () => {
    </div>
    <div>
    <label>Eres un profesor, estudiante ó padre de familia:</label>
-   <select class="controls" name="Orden" >
+   <select id="disable" class="controls" name="Orden" >
   <option value="" disabled selected>Ejem.Prof, estudiante, padre</option>
   <option value="az">Profesor</option>
   <option value="za">Profesora</option>
@@ -42,13 +42,12 @@ export default () => {
    <input class="controls"  id= "password-confirm" type="password" placeholder="Confirme Contraseña" required>
    <p class="col-12 error" id="pass-error"></p></div>
    <div id="btnTwo">
-   <input type="submit" id="btnLoginTwo" value="Check" class="btn solid" /></div>
+   <input type="submit" id="btnLoginTwo" value="Check in" class="btn solid" /></div>
  </section>
         </form>
       </section>
     </section>
     </section>
-
   <section class="panels-container">
   <section class="panel left-panel">
   <section class="content">

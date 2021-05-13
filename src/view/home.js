@@ -59,7 +59,7 @@ export default (dataCurrentUser) => {
     <section id="container-post"></section>
     </section>
   </main>
-  <section class="modal-progress">
+  <section id="cargaPhoto" class="modal-progress">
     <div class="progress">
       <progress value="0" max="100" id="uploader">0%</progress>
       <p id="messageProgress">0%</p>

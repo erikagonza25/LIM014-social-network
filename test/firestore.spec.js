@@ -34,7 +34,7 @@ const fixtureData = {
       __doc__: {
         id_001: {
           date: '',
-          likes: '',
+          likes: [],
           publication: 'Publicaciones',
           urlimg: '',
           userId: '001',
@@ -49,7 +49,6 @@ const fixtureData = {
               },
             },
           },
-
         },
       },
     },
