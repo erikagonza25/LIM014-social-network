@@ -1,3 +1,5 @@
+/* Función predeterminada para inicializar Firebase */
+
 // Key Firebase
 export default () => {
   const firebaseConfig = {
